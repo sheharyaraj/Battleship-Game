@@ -1,8 +1,11 @@
+Battleship final version updated  v3.0
+
 #include<iostream>
 #include<iomanip>
 #include <fstream>
 #include <stdlib.h>
 #include<ctime>
+#include<windows.h>
 
 using namespace std;
 
@@ -409,6 +412,10 @@ void grid12(char arr12[15][15])
 
 void mainmenu()
 {
+	HANDLE h;
+	h = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(h, 4);
+
 	int num;
 
 	cout << "1. Play Game " << endl;
@@ -3974,10 +3981,10 @@ void player_vs_machine_Easy()
 			grid4(arr4);
 
 			cout << "Enter Row: ";
-			row= rand() % 8;
+			row= rand() % 7;
 			cout << row<<endl;
 			cout << "Enter column: ";
-			column = rand() % 8;
+			column = rand() % 7;
 			cout << column;
 			cout << endl;
 
@@ -4022,10 +4029,10 @@ void player_vs_machine_Easy()
 			grid4(arr4);
 
 			cout << "Enter Row: ";
-			row = rand() % 8;
+			row = rand() % 7;
 			cout << row<<endl;
 			cout << "Enter column: ";
-			column = rand() % 8;
+			column = rand() % 7;
 			cout << column;
 			cout << endl;
 
@@ -4513,8 +4520,8 @@ void player_vs_Machine_Medium()
 		else
 			cout << "Machine choosed Horizontal " << endl;
 
-		int row = 0 + (rand() % 8);
-		int column = 0 + (rand() % 8);
+		int row = 0 + (rand() % 11);
+		int column = 0 + (rand() % 11);
 
 		switch (turn)
 		{
@@ -4538,8 +4545,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4560,8 +4567,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4592,7 +4599,6 @@ void player_vs_Machine_Medium()
 					arr6[row][column] = battleships[j];
 					column++;
 				}
-				turn++;
 			}
 			else if (align == 'v')
 			{
@@ -4601,13 +4607,12 @@ void player_vs_Machine_Medium()
 					arr6[row][column] = battleships[j];
 					row++;
 				}
-				turn++;
 			}
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 0)
 			{
@@ -4628,8 +4633,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 0)
 			{
@@ -4672,8 +4677,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4694,8 +4699,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4737,8 +4742,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4759,8 +4764,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4802,8 +4807,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4824,8 +4829,8 @@ void player_vs_Machine_Medium()
 			grid6(arr6);
 
 			align = 0 + (rand() % 2);
-			row = 0 + (rand() % 8);
-			column = 0 + (rand() % 8);
+			row = 0 + (rand() % 11);
+			column = 0 + (rand() % 11);
 
 			if (align == 1)
 			{
@@ -4863,7 +4868,7 @@ void player_vs_Machine_Medium()
 		player = 'O';
 	}
 
-	cout << "\t" << "Player 1 = X    Player 2 = O\n\n";
+	cout << "\t" << "Player 1 = X    Machine = O\n\n";
 
 	if (player == 'X')
 	{
@@ -4905,10 +4910,10 @@ void player_vs_Machine_Medium()
 
 
 			cout << "Enter Row: ";
-			row = rand() % 8;
+			row = rand() % 11;
 			cout << row << endl;
 			cout << "Enter column: ";
-			column = rand() % 8;
+			column = rand() % 11;
 			cout << column;
 			cout << endl;
 
@@ -4934,11 +4939,11 @@ void player_vs_Machine_Medium()
 
 		if (player1 == true)
 		{
-			cout << "Player 1 wins!!" << endl;
+			cout << "Player wins!!" << endl;
 		}
 		else if (player2 == true)
 		{
-			cout << "Player 2 wins!!" << endl;
+			cout << "Machine wins!!" << endl;
 		}
 	}
 
@@ -4951,10 +4956,10 @@ void player_vs_Machine_Medium()
 			grid8(arr8);
 
 			cout << "Enter Row: ";
-			row = rand() % 8;
+			row = rand() % 11;
 			cout << row << endl;
 			cout << "Enter column: ";
-			column = rand() % 8;
+			column = rand() % 11;
 			cout << column;
 			cout << endl;
 
@@ -5025,12 +5030,12 @@ void player_vs_Machine_Medium()
 
 void player_vs_Macine_Hard()
 {
-	const int a = 6, b = 9, c = 12;
-	char carrier[a] = { 'A', 'A', 'A', 'A', 'A', 'A' };
-	char battleships[b] = { 'B','B','B','B','B','B','B','B','B' };
-	char cruisers[c] = { 'C','C','C','C','C','C','C','C','C','C','C','C' };
-	char submarines[c] = { 'D','D','D','D','D','D','D','D','D','D','D','D' };
-	char destroyers[a] = { 'E','E' ,'E','E' ,'E','E' };
+	const int a = 8, b = 5, c = 4, d = 3, e = 2;
+	char carrier[a] = { 'A','A','A','A','A','A','A','A' };
+	char battleships[b] = { 'B','B','B','B','B' };
+	char cruisers[c] = { 'C','C','C','C' };
+	char submarines[d] = { 'D','D','D' };
+	char destroyers[e] = { 'E','E' };
 	int count_p1 = 0, count_p2 = 0;
 
 	char arr10[15][15];
@@ -5039,11 +5044,11 @@ void player_vs_Macine_Hard()
 	int turn = 0, row, column;
 	char player = 'X', align;
 
-	cout << "\t" << "Player 1 = X    Player 2= O\n\n";
+	cout << "\t" << "Player 1 = X    Machine= O\n\n";
 
 	grid9(arr9);
 
-	cout << "Player 1 Turn to place ships: " << endl;
+	cout << "Player Turn to place ships: " << endl;
 	for (int i = 0;i < 5;i++)
 	{
 		cout << "Enter Alignment of ship with v or h: ";
@@ -5057,6 +5062,84 @@ void player_vs_Macine_Hard()
 		switch (turn)
 		{
 		case 0:
+			if (align == 'h')
+			{
+				for (int j = 0;j < a;j++)
+				{
+					arr9[row][column] = carrier[j];
+					column++;
+				}
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < a;j++)
+				{
+					arr9[row][column] = carrier[j];
+					row++;
+				}
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < a;j++)
+				{
+					arr9[row][column] = carrier[j];
+					column++;
+				}
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < a;j++)
+				{
+					arr9[row][column] = carrier[j];
+					row++;
+				}
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < a;j++)
+				{
+					arr9[row][column] = carrier[j];
+					column++;
+				}
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < a;j++)
+				{
+					arr9[row][column] = carrier[j];
+					row++;
+				}
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
 			if (align == 'h')
 			{
 				for (int j = 0;j < a;j++)
@@ -5086,6 +5169,90 @@ void player_vs_Macine_Hard()
 					arr9[row][column] = battleships[j];
 					column++;
 				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < b;j++)
+				{
+					arr9[row][column] = battleships[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < b;j++)
+				{
+					arr9[row][column] = battleships[j];
+					column++;
+				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < b;j++)
+				{
+					arr9[row][column] = battleships[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < b;j++)
+				{
+					arr9[row][column] = battleships[j];
+					column++;
+				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < b;j++)
+				{
+					arr9[row][column] = battleships[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < b;j++)
+				{
+					arr9[row][column] = battleships[j];
+					column++;
+				}
 				turn++;
 			}
 			else if (align == 'v')
@@ -5101,6 +5268,90 @@ void player_vs_Macine_Hard()
 			break;
 
 		case 2:
+			if (align == 'h')
+			{
+				for (int j = 0;j < c;j++)
+				{
+					arr9[row][column] = cruisers[j];
+					column++;
+				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < c;j++)
+				{
+					arr9[row][column] = cruisers[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < c;j++)
+				{
+					arr9[row][column] = cruisers[j];
+					column++;
+				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < c;j++)
+				{
+					arr9[row][column] = cruisers[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < c;j++)
+				{
+					arr9[row][column] = cruisers[j];
+					column++;
+				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < c;j++)
+				{
+					arr9[row][column] = cruisers[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
 			if (align == 'h')
 			{
 				for (int j = 0;j < c;j++)
@@ -5124,7 +5375,91 @@ void player_vs_Macine_Hard()
 		case 3:
 			if (align == 'h')
 			{
-				for (int j = 0;j < c;j++)
+				for (int j = 0;j < d;j++)
+				{
+					arr9[row][column] = submarines[j];
+					column++;
+				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < d;j++)
+				{
+					arr9[row][column] = submarines[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < d;j++)
+				{
+					arr9[row][column] = submarines[j];
+					column++;
+				}
+				
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < d;j++)
+				{
+					arr9[row][column] = submarines[j];
+					row++;
+				}
+				
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < d;j++)
+				{
+					arr9[row][column] = submarines[j];
+					column++;
+				}
+			
+			}
+			else if (align == 'v')
+			{
+				for (int j = 0;j < d;j++)
+				{
+					arr9[row][column] = submarines[j];
+					row++;
+				}
+			
+			}
+			grid9(arr9);
+
+			cout << "Enter Alignment of ship with v or h: ";
+			cin >> align;
+			cout << "Enter Row: ";
+			cin >> row;
+			cout << "Enter column: ";
+			cin >> column;
+			cout << endl;
+
+			if (align == 'h')
+			{
+				for (int j = 0;j < d;j++)
 				{
 					arr9[row][column] = submarines[j];
 					column++;
@@ -5133,7 +5468,7 @@ void player_vs_Macine_Hard()
 			}
 			else if (align == 'v')
 			{
-				for (int j = 0;j < c;j++)
+				for (int j = 0;j < d;j++)
 				{
 					arr9[row][column] = submarines[j];
 					row++;
@@ -5145,7 +5480,7 @@ void player_vs_Macine_Hard()
 		case 4:
 			if (align == 'h')
 			{
-				for (int j = 0;j < a;j++)
+				for (int j = 0;j < e;j++)
 				{
 					arr9[row][column] = destroyers[j];
 					column++;
@@ -5154,7 +5489,7 @@ void player_vs_Macine_Hard()
 			}
 			else if (align == 'v')
 			{
-				for (int j = 0;j < a;j++)
+				for (int j = 0;j < e;j++)
 				{
 					arr9[row][column] = destroyers[j];
 					row++;
@@ -5315,8 +5650,8 @@ void player_vs_Macine_Hard()
 
 			grid11(arr11);
 
-			int row = 0 + (rand() % 8);
-			int column = 0 + (rand() % 8);
+			int row = 0 + (rand() % 14);
+			int column = 0 + (rand() % 14);
 			cout << "Machine's Random Position for Row is: " << row << " Colums is: " << column << endl;
 
 			if (arr10[row][column] == 'A' || arr10[row][column] == 'B' || arr10[row][column] == 'C' || arr10[row][column] == 'D' || arr10[row][column] == 'E')
