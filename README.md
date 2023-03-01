@@ -7,3 +7,5 @@ The working is not very complicated which many might assume from the length of t
 The only reason the code is that big is because 4 different boards are used according to the difficulty level so easy mode has 4 tables same with medium and hard so each function had to perform the same working but with minor variable changes.
 
 The working is explained in the comments of the 'player_vs_player_easy()' function which stays the same in all of the game modes except that arrays will be iterated according to their board size. Toss decides who gets to go first. 
+
+note: Player vs machine mode hasn't been integrated so it works the same as player vs player mode
